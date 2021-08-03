@@ -3,6 +3,7 @@
 library(tidyverse)
 library(tidycensus)
 
+
 # Filters the states so that it's only the contiguous ones
 continental <- state.name[! state.name %in% c("Alaska", "Hawaii")]
 
@@ -24,5 +25,5 @@ races_map <- races_data  %>%
        caption = "Source: American Community Survey 2014-2018") +
   theme_void()
 
-# Saves map as a png file.
+# Saves map as a png file i think
 write_rds(races_map, "temp.rds")
